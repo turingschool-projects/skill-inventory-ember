@@ -1,3 +1,20 @@
 html, body {
-  margin: 20px;
+  background-color: #343333;
+  margin: 10px;
+  color: white;
+}
+
+#title {
+  text-align: center;
+}
+
+#skill-logo {
+  margin-top: 0px;
+  text-align: center;
+  font-family: "desdemona";
+  font-size: 4em;
+}
+
+#login {
+  text-align: right;
 }
