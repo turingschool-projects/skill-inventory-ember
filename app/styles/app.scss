@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 html, body {
   background-color: #343333;
   margin: 10px;
@@ -16,5 +18,5 @@ html, body {
 }
 
 #login {
-  text-align: right;
+  text-align: right !important;
 }
