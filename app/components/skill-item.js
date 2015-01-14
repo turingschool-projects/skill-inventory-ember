@@ -9,7 +9,6 @@ export default Ember.Component.extend({
     rateSkill: function (skillLevel) {
       var title = this.get('skill.title');
       this.set('skillLevel', skillLevel);
-      console.log('You have rated ' + title + ' as ' + this.get('skillLevel'));
     }
 
   }
