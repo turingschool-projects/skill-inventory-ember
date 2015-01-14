@@ -7,11 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('login');
-  this.resource('student-dashboard', function () {
-    this.resource('skills', function () {
-      this.resource('all');
-      this.resource('featured');
-    });
+  this.resource('skills', function () {
+    this.route("featured");
+    this.route("all");
   });
 });
 

@@ -6,7 +6,7 @@ export default Ember.ObjectController.extend({
 
     authenticate: function () {
       // if current_user is student transition to student-dashboard, else instructor-dashboard
-      this.transitionToRoute('student-dashboard');
+      this.transitionToRoute('skills.featured');
     },
 
   }
