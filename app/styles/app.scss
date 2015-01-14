@@ -1,0 +1,22 @@
+@import "bootstrap";
+
+html, body {
+  background-color: #343333;
+  margin: 10px;
+  color: white;
+}
+
+#title {
+  text-align: center;
+}
+
+#skill-logo {
+  margin-top: 0px;
+  text-align: center;
+  font-family: desdemona, Helvetica;
+  font-size: 4em;
+}
+
+#login {
+  text-align: right !important;
+}
