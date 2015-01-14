@@ -13,10 +13,28 @@ html, body {
 #skill-logo {
   margin-top: 0px;
   text-align: center;
-  font-family: desdemona, Helvetica;
-  font-size: 4em;
 }
 
 #login {
-  text-align: right !important;
+  text-align: right;
+}
+
+#login-form {
+  text-align: center;
+}
+
+#today-date {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.skill-title {
+  font-size: 3em;
+  padding-right: 10px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.skill-list {
+  list-style: none;
 }
