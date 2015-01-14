@@ -1,10 +1,11 @@
-<li>
+<li class="skill-list">
 
-  {{skill.title}}
+  <div class="skill-title">{{skill.title}}</div>
 
-  <button class="btn btn-default" {{action 'rateSkill' 0}}>N/A</button>
-  <button class="btn btn-default" {{action 'rateSkill' 1}}>Struggling</button>
-  <button class="btn btn-default" {{action 'rateSkill' 2}}>Adequate</button>
-  <button class="btn btn-default" {{action 'rateSkill' 3}}>Confident</button>
-
+  <div class="skill-buttons">
+    <button class="btn btn-xs" {{action 'rateSkill' 0}}>N/A</button>
+    <button class="btn btn-xs" {{action 'rateSkill' 1}}>Struggling</button>
+    <button class="btn btn-xs" {{action 'rateSkill' 2}}>Adequate</button>
+    <button class="btn btn-xs" {{action 'rateSkill' 3}}>Confident</button>
+  </div>
 </li>

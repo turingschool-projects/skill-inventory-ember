@@ -7,7 +7,6 @@ export default Ember.Component.extend({
   actions: {
 
     rateSkill: function (skillLevel) {
-      var title = this.get('skill.title');
       this.set('skillLevel', skillLevel);
     }
 
