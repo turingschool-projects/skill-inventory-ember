@@ -8,7 +8,10 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.resource('student-dashboard', function () {
-    this.resource('class'); // will eventually need to pass the class_id here
+    this.resource('skills', function () {
+      this.resource('all');
+      this.resource('featured');
+    });
   });
 });
 

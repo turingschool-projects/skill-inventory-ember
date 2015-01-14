@@ -1,14 +1,10 @@
 <div id="today-date">Today's Date: {{current-date}}</div>
-<div id='todays-classes'>Today's Classes for (Cohort)</div>
 
-<div class="col-md-6">
-  <ul id='class-list'>
-    {{!-- This will be generated based on what is returned from rails api call --}}
-    <li>  {{#link-to 'class'}} Class 1 at 9:00 AM with (Instructor) in (Classroom)</li>{{/link-to}}
-    <li> Class 2 at 11:00 AM with (Instructor) in (Classroom)</li>
-  </ul>
+<div class="col-md-12 text-center">
+    {{#link-to 'all'}}All Skills{{/link-to}} |
+    {{#link-to 'featured'}}Featured Skills{{/link-to}}
 </div>
 
-<div class="col-md-6">
+<div class="col-md-12">
   {{outlet}}
 </div>
