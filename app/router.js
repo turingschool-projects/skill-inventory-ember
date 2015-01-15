@@ -10,10 +10,11 @@ Router.map(function() {
   this.resource('skills', function () {
     this.route("featured");
     this.route("all");
+    this.route('new');
   });
 
   this.resource('users', function () {
-    this.resource('user', { path: ':user_id' });
+    this.resource('user', { path: 'current_user' });
   });
 
 });
