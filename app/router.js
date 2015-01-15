@@ -9,13 +9,11 @@ Router.map(function() {
   this.route('login');
   this.resource('skills', function () {
     this.route("featured");
-    this.route("all");
     this.route('new');
   });
 
-  this.resource('users', function () {
-    this.resource('user', { path: 'current_user' });
-  });
+  this.resource('users');
+  this.resource('user', { path: 'current_user' });
 
 });
 
