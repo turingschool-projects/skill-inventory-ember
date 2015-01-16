@@ -11,6 +11,11 @@ Router.map(function() {
     this.route("featured");
     this.route("all");
   });
+
+  this.resource('users', function () {
+    this.resource('user', { path: ':user_id' });
+  });
+
 });
 
 export default Router;
