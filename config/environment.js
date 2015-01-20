@@ -20,11 +20,25 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.skillinventory = {
+      sessionUrl: 'http://localhost:4200/api/v1/sessions'
+    }
+
+    ENV.torii = {
+      sessionServiceName: 'session',
+      providers: {
+        'github-oauth2': {
+          apiKey: '06116e8c585f9852b942',
+          redirectUri: 'http://localhost:4200',
+        }
+      }
+    };
+
+    ENV.contentSecurityPolicy = {
+      'connect-src': "'self' http://localhost:3000"
+    }
   }
 
   if (environment === 'test') {
