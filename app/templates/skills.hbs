@@ -1,7 +1,10 @@
 <div id="today-date">Today's Date: {{current-date}}</div>
 <div class="text-center">
-  {{#link-to 'skills.featured'}}Featured Skills{{/link-to}} |
-  {{#link-to 'skills'}}All Skills{{/link-to}}
+  {{#link-to 'skills' class="filter-link"}}All Skills{{/link-to}} |
+  {{#link-to 'skills.featured' class="filter-link"}}Featured Skills{{/link-to}} |
+  {{#link-to 'skills.new' class="filter-link"}}Create Skill{{/link-to}}
 </div><br/>
 
-{{outlet}}
+<div class="col-md-4 col-md-offset-4">
+  {{outlet}}
+</div>

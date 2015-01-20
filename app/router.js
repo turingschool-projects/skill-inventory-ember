@@ -8,14 +8,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.resource('skills', function () {
-    this.route("featured");
+    this.route('featured');
     this.route('new');
-  });
-
-  this.resource('instructors', function() {
-    this.resource('skills', function() {
-      this.route('new');
-    });
   });
 
   this.resource('users');
