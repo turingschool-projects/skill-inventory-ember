@@ -6,10 +6,15 @@
 </div>
 <div class="form-group">
   <label>Group</label>
-  {{view "select" content=groups}}
+    {{view "select"
+        content=groups
+        value=group
+        class="form-control"
+        prompt="Select Group"
+    }}
 </div>
 <div class="form-group">
   <label>Featured?</label>
-  {{view "select" content=featured}}
+    {{input type="checkbox" checked=featured}}
 </div>
 <button class="btn btn-default" {{action 'saveSkill'}}>Save Skill</button>
