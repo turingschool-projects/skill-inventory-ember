@@ -11,6 +11,11 @@ Router.map(function() {
     this.route("featured");
     this.route("all");
   });
+  this.resource('instructors', function() {
+    this.resource('skills', function() {
+      this.route('new');
+    });
+  });
 });
 
 export default Router;
