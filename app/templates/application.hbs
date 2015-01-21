@@ -4,9 +4,15 @@
     One sec while we get you signed in...
   {{else}}
     {{error}}
-    <button {{action 'signInViaGithub'}}>
-      Login
-    </button>
+    {{#if session.isAuthenticated}}
+      <button {{action 'closeSession'}}>
+        Logout
+      </button>
+    {{else}}
+      <button {{action 'signInViaGithub'}}>
+        Login
+      </button>
+    {{/if}}
   {{/if}}
   <div class="row">
     <div class="col-md-12">
