@@ -24,7 +24,7 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.skillinventory = {
       sessionUrl: 'http://localhost:4200/api/v1/sessions'
-    }
+    };
 
     ENV.torii = {
       sessionServiceName: 'session',
@@ -54,7 +54,19 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.torii = {
+      sessionServiceName: 'session',
+      providers: {
+        'github-oauth2': {
+          apiKey: '99123005621687c8d304',
+          redirectUri: 'http://skillinventory.divshot.io',
+        }
+      }
+    };
 
+    ENV.skillinventory = {
+      sessionUrl: '/__/proxy/api/sessions'
+    }
   }
 
   return ENV;
