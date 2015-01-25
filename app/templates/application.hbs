@@ -1,4 +1,3 @@
-
 <div class="container">
   {{#if session.isWorking}}
     One sec while we get you signed in...
@@ -9,7 +8,7 @@
         Logout
       </button>
     {{else}}
-      <button {{action 'signInViaGithub'}}>
+      <button {{action 'signInViaGithub'}} class="btn btn-primary pull-right">
         Login with Github
       </button>
     {{/if}}

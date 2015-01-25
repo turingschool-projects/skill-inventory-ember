@@ -62,11 +62,12 @@ module.exports = function(environment) {
           redirectUri: 'http://skillinventory.divshot.io',
         }
       }
-    };
+    }
 
     ENV.skillinventory = {
       sessionUrl: '/__/proxy/api/sessions'
     }
+
   }
 
   return ENV;

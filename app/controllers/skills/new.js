@@ -6,9 +6,11 @@ export default Ember.ObjectController.extend({
 
   actions: {
     saveSkill: function() {
+      var self = this;
+
       this.get('model').save().then(function() {
-        this.transitionToRoute('skills');
-      }.bind(this));
+        self.transitionToRoute('skills');
+      });
     }
   }
 });
