@@ -14,9 +14,7 @@ export default Ember.Route.extend({
     },
 
     closeSession: function() {
-      var route = this;
-
-      this.get('session').close
+      window.location.reload(true);
     }
   }
 });

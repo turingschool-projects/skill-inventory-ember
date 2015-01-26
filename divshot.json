@@ -1,0 +1,19 @@
+{
+  "name": "skillinventory",
+  "root": "./dist",
+  "routes": {
+    "/tests": "tests/index.html",
+    "/tests/**": "tests/index.html",
+    "/**": "index.html"
+  },
+  "proxy": {
+    "api": {
+      "origin":"https://skill-inventory.herokuapp.com/api/v1/",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "cookies": false,
+      "timeout": 30
+    }
+  }
+}
