@@ -3,7 +3,7 @@
 <div class="skill">
   {{#if session.currentUser}}
     {{#each}}
-      {{skill-item skill=this}}
+      {{skill-item skill=this user_id=session.currentUser.id section_id=skill-item.section_id}}
     {{/each}}
   {{else}}
     Please log-in to see skills.
