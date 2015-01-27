@@ -6,13 +6,6 @@
     </div>
     <div class="form-group">
       <label>Section</label>
-{{!--         {{view "select"
-            content=sections
-            value="content.section"
-            optionLabelPath="content.name"
-            class="form-control"
-            prompt="Select Module"
-        }} --}}
         {{view Ember.Select
           content=controller.sections
           selection=model.section.content
