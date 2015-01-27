@@ -5,12 +5,22 @@
       {{input type="text" value=name class="form-control"}}
     </div>
     <div class="form-group">
-      <label>Module</label>
-        {{view "select"
+      <label>Section</label>
+{{!--         {{view "select"
             content=sections
-            value=section
+            value="content.section"
+            optionLabelPath="content.name"
             class="form-control"
             prompt="Select Module"
+        }} --}}
+        {{view Ember.Select
+          content=controller.sections
+          selection=model.section.content
+          optionValuePath="content.id"
+          optionLabelPath="content.name"
+          prompt="Choose Module"
+          class="form-control"
+          id="input-modules"
         }}
     </div>
     <div class="form-group">
