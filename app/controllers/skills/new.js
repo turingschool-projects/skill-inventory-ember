@@ -7,10 +7,6 @@ export default Ember.ObjectController.extend({
     return this.get('session.currentUser.role') === 'instructor';
   }.property('session.currentUser'),
 
-  observeSection: function() {
-    console.log(this.get('section'));
-  }.observes('section'),
-
   actions: {
     saveSkill: function() {
       var self = this;
