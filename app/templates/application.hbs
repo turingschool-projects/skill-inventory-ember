@@ -1,16 +1,15 @@
-
 <div class="container">
   {{#if session.isWorking}}
     One sec while we get you signed in...
   {{else}}
     {{error}}
     {{#if session.isAuthenticated}}
-      <button {{action 'closeSession'}}>
+      <button {{action 'closeSession'}} class="btn btn-primary pull-right">
         Logout
       </button>
     {{else}}
-      <button {{action 'signInViaGithub'}}>
-        Login
+      <button {{action 'signInViaGithub'}} class="btn btn-primary pull-right">
+        Login with Github
       </button>
     {{/if}}
   {{/if}}

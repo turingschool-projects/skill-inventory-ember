@@ -16,6 +16,13 @@ export default Ember.Object.extend({
           Ember.run.bind(null, reject({ 'message': errorThrown }));
         }
       });
+    }).then(function(user){
+      // The returned object is merged onto the session (basically). Here
+      // you may also want to persist the new session with cookies or via
+      // localStorage.
+      return {
+        currentUser: user
+      };
     });
   }
 });
