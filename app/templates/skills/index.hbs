@@ -4,6 +4,7 @@
   {{#if session.currentUser}}
     {{#each}}
       {{skill-item skill=this}}
+      <!-- link-to 'tags.show' skill -->
     {{/each}}
   {{else}}
     Please log-in to see skills.

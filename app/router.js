@@ -15,6 +15,9 @@ Router.map(function() {
   this.resource('users');
   this.resource('user', { path: 'current_user' });
 
+  this.resource('tags', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
