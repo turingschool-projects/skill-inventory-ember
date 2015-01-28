@@ -2,6 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
-  group: DS.belongsTo('group'),
-  featured: DS.attr('boolean')
+  section: DS.belongsTo('section', {async: true}),
+  featured: DS.attr('boolean'),
+  // rating: DS.hasOne('rating', {async: true})
 });

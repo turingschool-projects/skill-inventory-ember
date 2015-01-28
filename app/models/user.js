@@ -2,5 +2,6 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
-  group: DS.belongsTo('group')
+  section: DS.belongsTo('section', {async: true}),
+  ratings: DS.hasMany('rating', {async: true})
 });
