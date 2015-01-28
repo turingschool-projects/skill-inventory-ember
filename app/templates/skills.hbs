@@ -2,7 +2,9 @@
 <div class="text-center">
   {{#link-to 'skills' class="filter-link"}}All Skills{{/link-to}} |
   {{#link-to 'skills.featured' class="filter-link"}}Featured Skills{{/link-to}} |
-  {{#link-to 'skills.new' class="filter-link"}}Create Skill{{/link-to}}
+  {{#if currentUserIsInstructor}}
+    {{#link-to 'skills.new' class="filter-link"}}Create Skill{{/link-to}}
+  {{/if}}
 </div><br/>
 
 <div class="col-md-4 col-md-offset-4">

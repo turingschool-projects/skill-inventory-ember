@@ -12,6 +12,8 @@ Router.map(function() {
     this.route('new');
   });
 
+  this.route('rating');
+
   this.resource('users');
   this.resource('user', { path: 'current_user' });
 
