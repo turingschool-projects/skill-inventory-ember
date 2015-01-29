@@ -17,9 +17,6 @@ export default Ember.Object.extend({
         }
       });
     }).then(function(user){
-      // The returned object is merged onto the session (basically). Here
-      // you may also want to persist the new session with cookies or via
-      // localStorage.
       return {
         currentUser: user
       };
