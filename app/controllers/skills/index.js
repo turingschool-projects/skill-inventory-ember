@@ -1,5 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  sortProperties: ['name']
+  sortProperties: ['section.name'],
+
+  actions: {
+    sortBy: function (properties) {
+      this.set('sortProperties', [properties])
+    }
+  }
 });

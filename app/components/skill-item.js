@@ -7,6 +7,7 @@ export default Ember.Component.extend({
 
     rateSkill: function (skillLevel) {
       var store = this.get('targetObject.store');
+
       store.createRecord('rating').setProperties({
         score: skillLevel,
         skill: this.get('skill'),
