@@ -7,10 +7,11 @@ var App;
 module('Integration - User Login', {
   setup: function() {
     App = startApp();
-    this.xhr                = sinon.useFakeXMLHttpRequest();
-    this.server             = sinon.fakeServer.create();
+    // Sinon may be necessary for later integration tests, so here's the proper setup:
+    //this.xhr                = sinon.useFakeXMLHttpRequest();
+    //this.server             = sinon.fakeServer.create();
     this.server.autoRespond = true;
-    sinon.spy(Ember.$, 'ajax');
+    //sinon.spy(Ember.$, 'ajax');
 
   },
   teardown: function() {
