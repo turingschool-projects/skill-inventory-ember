@@ -7,14 +7,6 @@
   <button class='btn btn-large' {{action "sortBy" "rating.score"}}>Sort By Rating</button>
     {{#each}}
       {{skill-item skill=this}}
-      {{#view "tag"}}Add Tag{{/view}}
-
-      <form {{action "createTag" on="submit"}}>
-      <div class="new-tag-field">
-        {{input type="text" value="name" placeholder="Type Tag Name" size="20"}}
-        <button class="btn btn-default btn-tiny" type="submit">Save Tag</button>
-      </div>
-      </form>
     {{/each}}
   {{else}}
     Please log-in to see skills.

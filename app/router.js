@@ -10,6 +10,7 @@ Router.map(function() {
   this.resource('skills', function () {
     this.route('featured');
     this.route('new');
+    this.resource('skill', { path: ':skill_id' });
   });
 });
 
