@@ -4,8 +4,6 @@ import startApp from '../helpers/start-app';
 
 var App;
 
-//returns error/transition if name missing
-
 module('Integration - User Login', {
   setup: function() {
     App = startApp();
@@ -16,7 +14,6 @@ module('Integration - User Login', {
 }); 
 
 test('creates a skill when given name, group, and featured', function() {
-  // Add authentication helper?
   visit('/skills/new').then( function() {
     var skill = "A - Learn you the embers";
 
@@ -37,9 +34,7 @@ test('creates a skill when given name, group, and featured', function() {
       click('button.btn');
 
       andThen(function() {
-      //need to assert the error message appears, currently, ember isn't receiving the errors hash from the rails validations
         equal(currentPath(), 'skills.new'); 
-        //equal(find('.errors').first().text(), "skill name cannot be blank"); 
       });
     });
   });

@@ -17,15 +17,3 @@ module('Integration - User Login', {
     Ember.run(App, 'destroy');
   }
 }); 
-
-//happy path
-  test('logs in user and returns github username and token', function() {
-    visit('/').then( function() {
-      click('#login-form');
-    });
-  });
-
-
-//sad path
-// returns error message
-
