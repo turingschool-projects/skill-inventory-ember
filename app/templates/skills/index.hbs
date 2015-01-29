@@ -1,7 +1,10 @@
- <div class='text-center filter-title'><h1>All Skills</h1></div>
+<div class='text-center filter-title'><h1>All Skills</h1></div>
 
 <div class="skill">
   {{#if session.currentUser}}
+  <button class='btn btn-large' {{action "sortBy" "name"}}>Sort By Name</button>
+  <button class='btn btn-large' {{action "sortBy" "section.name"}}>Sort By Module</button>
+  <button class='btn btn-large' {{action "sortBy" "rating.score"}}>Sort By Rating</button>
     {{#each}}
       {{skill-item skill=this}}
     {{/each}}
