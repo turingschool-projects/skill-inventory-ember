@@ -1,11 +1,11 @@
 <div class="skill-list">
   <h3 class="skill-title">{{skill.name}}</h3>
-
-  <div class="skill-buttons">
+  <div class="skill-buttons" {{bind-attr class="skill.isCompleted:completed"}}>
     <button class="btn btn-xs" {{action 'rateSkill' 0}}>N/A</button>
     <button class="btn btn-xs" {{action 'rateSkill' 1}}>Struggling</button>
     <button class="btn btn-xs" {{action 'rateSkill' 2}}>Adequate</button>
     <button class="btn btn-xs" {{action 'rateSkill' 3}}>Confident</button>
   </div>
-  {{skill.section.name}}
+  Module: {{skill.section.name}}
+  Your rating: {{skill.rating.score}}
 </div>
