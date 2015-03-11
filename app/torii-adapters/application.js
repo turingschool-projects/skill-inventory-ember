@@ -20,14 +20,14 @@ export default Ember.Object.extend({
         url: config.skillinventory.sessionUrl,
         type: "POST",
         data: tokenData,
-        dataType: 'json',
+        dataType: "json",
         success: function(data){
           localStorage.setItem("token", data.token);
           var currentUser = Ember.Object.create(data);
           Ember.run.bind(null, resolve({ "currentUser": currentUser }));
         },
         error: function(jqXHR, textStatus, errorThrown){
-          Ember.run.bind(null, reject({ 'message': errorThrown }));
+          Ember.run.bind(null, reject({ "message": errorThrown }));
         }
       });
     });
