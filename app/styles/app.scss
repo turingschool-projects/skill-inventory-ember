@@ -17,5 +17,11 @@
 @import "app/styles/modules/footer";
 @import "app/styles/modules/header";
 @import "app/styles/modules/outline_list";
+@import "app/styles/modules/outline";
 @import "app/styles/modules/quote";
 @import "app/styles/modules/text";
+
+body {
+   margin: 0;
+   font-family: "aktiv-grotesk-std", sans-serif;
+  }

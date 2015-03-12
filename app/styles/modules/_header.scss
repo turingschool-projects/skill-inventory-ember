@@ -27,7 +27,7 @@
     height: 77px;
     float: left;
     @include hide-text;
-    background-image: url("https://raw.githubusercontent.com/turingschool/today/master/source/images/logo.png", no-repeat);
+    background-image: url("https://raw.githubusercontent.com/turingschool/today/master/source/images/logo.png");
     @include retina {
       background-image: url("https://raw.githubusercontent.com/turingschool/today/master/source/images/logo@2x.png");
       background-size: 100%;
@@ -73,4 +73,8 @@
       }
     }
   }
+}
+.mod-columns:before, .mod-header:before, .mod-columns:after, .mod-header:after {
+  content: "";
+  display: table-column;
 }
