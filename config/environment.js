@@ -30,7 +30,7 @@ module.exports = function(environment) {
       sessionServiceName: 'session',
       providers: {
         'github-oauth2': {
-          apiKey: '06116e8c585f9852b942',
+          apiKey: process.env.GITHUB_CLIENT_ID,
           redirectUri: 'http://localhost:4200',
         }
       }
@@ -58,7 +58,7 @@ module.exports = function(environment) {
       sessionServiceName: 'session',
       providers: {
         'github-oauth2': {
-          apiKey: '99123005621687c8d304',
+          apiKey: process.env.GITHUB_CLIENT_ID,
           redirectUri: 'http://skillinventory.divshot.io',
         }
       }
