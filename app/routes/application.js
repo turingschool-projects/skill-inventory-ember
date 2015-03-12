@@ -1,8 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  actions: {
+  activate: function() {
+    this.get('session').fetch();
+  },
 
+  actions: {
     signInViaGithub: function() {
       var route = this;
 
@@ -13,8 +16,5 @@ export default Ember.Route.extend({
       });
     },
 
-    closeSession: function() {
-      window.location.reload(true);
-    }
   }
 });
