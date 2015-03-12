@@ -8,5 +8,6 @@ export default DS.Model.extend({
   thumbnailUrl: DS.attr('string'),
   email: DS.attr('string'),
   cohort: DS.belongsTo('cohort', {async: true}),
-  ratings: DS.hasMany('rating', {async: true})
+  ratings: DS.hasMany('rating', {async: true}),
+  skills: DS.hasMany('skill', {async: true})
 });
