@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import Ember from "ember";
 
 export default Ember.Component.extend({
 
@@ -8,13 +8,13 @@ export default Ember.Component.extend({
   actions: {
 
     startEditing: function() {
-      this.set('editing', true);
+      this.set("editing", true);
     },
 
     stopEditing: function() {
-      var user = this.get('user');
+      var user = this.get("user");
       user.save().then(function() {
-        this.set('editing', false);
+        this.set("editing", false);
       }.bind(this));
     }
   },
