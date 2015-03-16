@@ -17,11 +17,11 @@ export default Ember.Controller.extend({
 
     stopEditing: function() {
       var user = this.get('user');
-      var new_cohort = this.store.createRecord('cohort', {
+      var newCohort = this.store.createRecord('cohort', {
         name: this.get('name'),
       });
 
-      user.set('cohort', new_cohort);
+      user.set('cohort', newCohort);
 
       user.save().then(function() {
         this.set('editing', false);
