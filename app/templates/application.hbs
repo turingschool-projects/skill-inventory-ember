@@ -1,134 +1,37 @@
+
 <header class="mod-header">
-  <div class="layout-wrap">
-    <h1>
-      <a href="http://turing.io">Turing School of Software & Design</a>
-    </h1>
-    <nav>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </nav>
+<div class="layout-wrap">
+  <h1>
+    <a href="http://turing.io">Turing School of Software & Design</a>
+  </h1>
+  <nav>
+    <ul>
+      <li>
+        {{#if session.currentUser}}
+          Welcome, {{session.currentUser.username}}
+        {{else}}
+          {{#if session.isWorking}}
+          Signing you in...
+          {{else}}
+        {{error}}
+          <button {{action 'signInViaGithub'}} class="btn btn-primary pull-right">
+            Login with Github
+          </button>
+          {{/if}}
+        {{/if}}
+      </li>
+      <li></li>
+      <li></li>
+    </ul>
+  </nav>
 </header>
 
 <div class="mod-outline">
   <div class="layout-inner-wrap">
 
-    <div class="col-article"><h1>2015-03-12</h1>
+    <div class="col-article">
 
-      <h2>All</h2>
-
-      <h3>Warm Up (8:30 - 8:50)</h3>
-
-      <p>Continue working on the <a href="http://www.puzzlenode.com/puzzles/7-blue-hawaii">Blue Hawaii</a> puzzle.</p>
-
-      <h2>1409</h2>
-
-      <h3 id="project-check-ins-and-work-time-900-to-1200">Project Check-ins and Work Time (9:00 to 12:00)</h3>
-
-      <ul>
-        <li>9:00: Big Brother</li>
-        <li>9:30: Skill Inventory</li>
-        <li>10:00: Scavenger Hunter</li>
-      </ul>
-
-      <h3 id="project-work-time-100---400">Project Work Time (1:00 - 4:00)</h3>
-
-      <p>Josh Cheek is on hand for questions.</p>
-
-      <h2 id="section-1">1410</h2>
-
-      <h3 id="individual-project-i2-checkins-and-work-time-900---1200">Individual Project I2 Checkins and Work Time (9:00 - 12:00)</h3>
-
-      <p>Meet with Jorge to see how your individual projects are progressing.</p>
-
-      <ul>
-        <li>9:00: Orion Osborn</li>
-        <li>9:10: Michael Dao</li>
-        <li>9:20: Kit Pearson</li>
-        <li>9:30: Jeffrey Wan</li>
-        <li>9:40: Konr Josef Larson</li>
-        <li>9:50: Rich Shea</li>
-        <li>10:00: Brandon Mrsny</li>
-        <li>10:10: Emily Berkeley</li>
-        <li>10:20: Adam Smith</li>
-        <li>10:30: Chris Luhring</li>
-        <li>10:40: Bhargavi Satpathy</li>
-        <li>10:50: Bryce Holcomb</li>
-        <li>11:00: Laura Whalin</li>
-        <li>11:10: Lydia Shafer</li>
-        <li>11:20: Nathan Owsiany</li>
-        <li>11:30: Krista A Nelson</li>
-        <li>11:40: Alexandra Robinson</li>
-        <li>11:50: Scott Crawford</li>
-      </ul>
-
-      <h3 id="individual-project-work-time-900---1200">Individual Project Work Time (9:00 - 12:00)</h3>
-
-      <p>Keep self-directing yourselves on your projects.</p>
-
-      <h2 id="section-2">1412</h2>
-
-      <h3 id="intro-to-the-asset-pipeline-900---1030">Intro to the Asset Pipeline (9:00 - 10:30)</h3>
-
-      <p>Join Rachel in Classroom C to unwrap the mysteries of the Asset Pipeline.</p>
-
-      <h3 id="transactions-callbacks-and-scopes-1030---1200">Transactions, Callbacks, and Scopes (10:30 - 12:00)</h3>
-
-      <p>Join 3-time ActiveRecord Golf Masters Champion Josh Mejia in Classroom C to talk about some more advanced features of active record.</p>
-
-      <h3 id="pushing-logic-down-the-stack-redux-100---200">Pushing Logic Down the Stack Redux (1:00 - 2:00)</h3>
-
-      <p>Let's take <a href="http://tutorials.jumpstartlab.com/topics/architecture/pushing_logic_down_the_stack.html">another stab at this in Classroom B</a>.</p>
-
-      <h3 id="dinner-dash-checkins-and-work-time-100---400">Dinner Dash Checkins and Work Time (1:00 - 4:00)</h3>
-
-      <p>Work on your projects and meet with Josh and Rachel to assess your progress.</p>
-
-      <p>(TBD Josh M/Rachel add schedule for this)</p>
-
-      <h2 id="section-3">1502</h2>
-
-      <h3 id="group-2-se-work-time-900---1200">Group 2: SE Work Time (9:00 - 12:00)</h3>
-
-      <p>If you just started SalesEngine this week then keep working this morning.</p>
-
-      <h3 id="group-1-sales-engine-evaluations-900---1100">Group 1: Sales Engine Evaluations (9:00 - 11:00)</h3>
-
-      <p>Exemplars of e-commerce—let's find out what these Sales Engines are made of. Meet with Jeff to go over your project.</p>
-
-      <ul>
-        <li>9:00 - Chelsea &amp; Kristina</li>
-        <li>9:30 - Tyler &amp; Tess</li>
-        <li>10:00 - Tony &amp; Eric</li>
-        <li>10:30 - Mike &amp; Michelle</li>
-      </ul>
-
-      <p>When you're <em>not</em> in an evaluation, practice your Sudoku skills and strategy:</p>
-
-      <ul>
-        <li><a href="http://www.websudoku.com/">Sudoku Problems</a></li>
-        <li><a href="http://www.sudokudragon.com/sudokustrategy.htm">Strategy 1</a></li>
-        <li><a href="http://killersudokuonline.com/tips.html">Strategy 2</a></li>
-      </ul>
-
-      <h3 id="group-1-robodoku-kickoff-1100---1200">Group 1: Robodoku Kickoff (11:00 - 12:00)</h3>
-
-      <p>After evals let's meet in Classroom A to kickoff Robodoku.</p>
-
-      <h3 id="all-se-knowledge-transfer-100---230">All: SE Knowledge Transfer (1:00 - 2:30)</h3>
-
-      <p>This afternoon we'll do a bit a group programming to share knowledge about
-      SalesEngine. Meet up in Classroom A.</p>
-
-      <h3 id="independent-work-time-230---400">Independent Work Time (2:30 - 4:00)</h3>
-
-      <ul>
-        <li>Just getting started on SalesEngine? Do that.</li>
-        <li>Want to touch up your Enigma? Sounds good.</li>
-        <li>Just passed SalesEngine and need some time to recover? Do something fun but programming-related.</li>
-      </ul>
+      {{outlet}}
     </div>
   </div>
 </div>
@@ -136,5 +39,3 @@
 <footer class="mod-footer">
   <p>© Copyright 2014 Turing School of Software &amp; Design, All rights reserved</p>
 </footer>
-
-{{outlet}}

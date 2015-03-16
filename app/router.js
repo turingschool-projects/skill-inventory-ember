@@ -7,11 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('login');
-  this.resource('skills', function () {
-    this.route('featured');
-    this.route('new');
-    this.resource('skill', { path: ':skill_id' });
-  });
+  this.route('dashboard', { path: '/dashboard' });
 });
 
 export default Router;
