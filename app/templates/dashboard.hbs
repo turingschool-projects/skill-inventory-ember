@@ -1,6 +1,14 @@
 <h1>Featured Skills - {{model.cohort.name}}</h1>
 <div>
-  {{user-cohort user=model}}
+  {{if editing}}
+    <div id="edit-form">
+      {{view "select" content=cohortNames value=user.cohort.name}}
+      <button {{action 'stopEditing'}}>Assign to Cohort</button>
+    </div>
+  {{else}}
+    <h5>{{user.cohort.name}} Cohort</h5>
+    <button {{action 'startEditing'}} class="button tiny secondary-btn">Change Cohort</button>
+  {{/if}}
 </div>
 <div>
   {{#each skill in model.skills}}

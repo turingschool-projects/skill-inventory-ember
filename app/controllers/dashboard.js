@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   editing: false,
-  cohortNames: ["1409", "1410", "1412", "1502"],
 
   cohorts: [
     {name: "1409", id: 1},
