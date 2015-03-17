@@ -1,13 +1,13 @@
-<h1>Featured Skills - {{model.cohort.name}}</h1>
+<h1>Featured Skills - </h1>
 <div>
     <div id="edit-form">
       <button {{action 'stopEditing'}}>Assign to Cohort</button>
     </div>
-    <h5>{{model.cohort.name}} Cohort</h5>
+    <h5> Cohort</h5>
     <button {{action 'startEditing'}} class="button tiny secondary-btn">Change Cohort</button>
 </div>
 <div>
-  {{#each skill in model.skills}}
+  {{#each skill in model}}
 </div>
 <h2>{{skill.name}}</h2>
 {{/each}}
