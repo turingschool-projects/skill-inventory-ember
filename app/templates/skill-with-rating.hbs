@@ -7,11 +7,5 @@
     <button {{action 'startEditing'}} class="button tiny secondary-btn">Change Cohort</button>
 </div>
 {{#each skill in model}}
-  <h2>{{skill.name}}</h2>
-    {{#if skill.rating}}
-    <p>current rating: {{skill.rating}}</p>
-    {{/if}}
-    {{#if skill.featured}}
-    <p>This skill is featured for {{currentUser.name}}</p>
-    {{/if}}
+  {{skill-item skill=skill}}
 {{/each}}

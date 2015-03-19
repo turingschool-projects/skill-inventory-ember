@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('login');
-  this.resource('skill-with-rating')
+  this.resource('skill-with-rating');
 });
 
 export default Router;
